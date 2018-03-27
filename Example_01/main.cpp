@@ -2,11 +2,13 @@
 #include <stdio.h>
 
 void inicializar(){
-
+    glClearColor(1,0,0,0);
 }
 
 void graficar(){
-    printf("Hola\n");
+    glClear(GL_COLOR_BUFFER_BIT);
+    glFlush();
+
 }
 
 int main(int argc,char** argv){
@@ -14,7 +16,7 @@ int main(int argc,char** argv){
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
     glutInitWindowSize(250,300);
-    glutInitWindowPosition(100,100);
+    glutInitWindowPosition(300,100);
     glutCreateWindow("Primera Ventana");
     inicializar();
     glutDisplayFunc(graficar);
